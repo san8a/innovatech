@@ -1,0 +1,603 @@
+/*Fuentes*/
+@font-face {
+    font-family: Poppins;
+    src: url(../Fonts/Poppins/Poppins-Bold.ttf);
+    }
+@font-face {
+    font-family: Poppins-light;
+    src: url(../Fonts/Poppins/Poppins-Regular.ttf);
+    }
+/*Variables*/
+:root{
+    --color-main: #fff;
+    --green-main: #0cdf52;
+    --color-secondary: black;
+}
+
+/*Configuraciones del body*/
+
+body{
+    background-color: var(--color-main);
+    scroll-behavior: smooth;
+}
+/*"Clases variables"*/
+.hidden{
+    display: none;
+}
+.effect-blur{
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+/*Menu Principal*/
+
+.menu-box{
+    width: 100%;
+    height: 8%;
+    background-color: var(--color-main);
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+}
+
+.home{
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 2%;
+    left: 30%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+    z-index: 10;
+    color: black;
+}
+.home::after{
+    content:"   ";
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    background-color: transparent;
+    width: 10px ;
+    height: 10px;
+    border-radius: 10000px;
+    z-index: 10;
+    transition: linear .1s all;
+}
+.home:hover::after{
+ background-color: var(--green-main);
+}
+
+.about-us{
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 2%;
+    left: 39%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+    z-index: 10;
+    color: black;
+}
+.about-us::after{
+    content:"   ";
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    background-color: transparent;
+    width: 10px ;
+    height: 10px;
+    border-radius: 10000px;
+    z-index: 10;
+    transition: linear .1s all;
+}
+.about-us:hover::after{
+ background-color: var(--green-main);
+}
+
+.contact{
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+    z-index: 10;
+    color: black;
+}
+.contact::after{
+    content:"   ";
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    background-color: transparent;
+    width: 10px ;
+    height: 10px;
+    border-radius: 10000px;
+    z-index: 10;
+    transition: linear .1s all;
+}
+.contact:hover::after{
+ background-color: var(--green-main);
+}
+
+.opinions{
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 2%;
+    left: 60%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+    z-index: 10;
+    color: black;
+}
+.opinions::after{
+    content:"   ";
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    background-color: transparent;
+    width: 10px ;
+    height: 10px;
+    border-radius: 10000px;
+    z-index: 10;
+    transition: linear .1s all;
+}
+.opinions:hover::after{
+ background-color: var(--green-main);
+}
+
+
+/*Theme mode button*/
+
+.button-theme-primary{
+    background-image: url(../images/moon.png);
+    background-color: var(--bg-color-main);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    top: 88%;
+    left: 3%;
+    -webkit-box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59); 
+    box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59);
+    transition: all linear .2s;
+}
+.button-theme-primary:hover{
+    background-color: var(--color-secondary);
+    background-image: url(../images/secondary-moon.png);
+}
+.button-theme-secondary{
+    background-image: url(../images/secondary-moon.png);
+    background-color: var(--color-main);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 88%;
+    left: 3%;
+    -webkit-box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59); 
+    box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59);
+    transition: all linear .2s;
+}
+.button-theme-secondary:hover{
+    background-color: var(--color-secondary);
+    background-image: url(../images/moon.png);
+}
+
+/*logo menu index*/
+
+.logo-main{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 30;
+
+}
+
+/*ilustration main*/
+
+.illustration-main{
+    background-image: url(../images/blogging.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    width: 45%;
+    height: 70%;
+}
+
+/*Titulo y descipcion inicial*/
+
+.titulo-main{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 100px;
+    font-family: 'Poppins';
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.description-main{
+    background-color: transparent;
+    font-size: 20px;
+    color: var(--font-color);
+    font-family: Poppins-light;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    z-index: 10;
+
+}
+
+/*Button starts*/
+
+.start-button{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    width: 200px;
+    height: 20px;
+    padding: 15px;
+    font-size: 20px;
+    font-family: Poppins;
+    color: #0cdf52;
+    text-align: center;
+    transition: linear .1s;
+    z-index: 10;
+}
+
+.arrow-button{
+    background-color: #0cdf52;
+    width: 40px;
+    height: 47px;
+    position: absolute;
+    top: 70%;
+    left: 28.5%;
+    border-radius: 100%;
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    padding-top: 13px;
+    transition: linear .4s all;
+}
+
+.arrow-button-hover{
+    background-color: #0cdf52;
+    width: 240px;
+    height: 47px;
+    position: absolute;
+    top: 70%;
+    left: 29%;
+    border-radius: 44px;
+    font-size: 30px;
+    color: white;
+    padding-left: 15px;
+    padding-top: 10px;
+} 
+
+/*Login Button*/
+.login-button{
+    background-color: transparent;
+    position: fixed;
+    top: 2%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    padding-left: 17px;
+    font-size: 30px;
+    -webkit-box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59); 
+    box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59);
+    transition: all linear .2s;
+    border-radius: 100%;
+z-index: 30;
+}
+.login-button:hover{
+    background-color: var(--color-secondary);
+   color: white;
+}
+
+/*Login form*/
+
+.login-box{
+
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height: 90%;
+    width: 80%;
+    background-color: #fff;
+    z-index: 31;
+    -webkit-box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59); 
+    box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59);
+    animation-name: entrada;
+    animation-duration: .5s;
+    
+    
+}
+@keyframes entrada {
+	from {
+		opacity: 1;
+		width: 0%;
+ 
+      
+	}
+
+	to {
+		width: 80%;
+		opacity: 1;
+       
+	}
+}
+/*Close button*/
+.x{
+    position: relative;
+    left: 97%;
+    top: .5%;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    z-index: 100;
+}
+/*Illustration login*/
+.login-illustration{
+    position: relative;
+    top: -3%;
+    left: 0%;
+    width: 60%;
+    height: 80%;
+    background-image: url(../images/welcome.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease .4s;
+}
+/*Login title*/
+.login-title{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    font-size: 50px;
+    font-family: Poppins;
+    transition: all ease .4s;
+
+}
+/*first input user*/
+.input-user{
+    width: 20%;
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transition: all ease .4s;
+}
+.input-user:focus{
+outline: none;
+
+border-bottom: 4px solid var(--green-main);
+}
+/*Icon first input*/
+.icon-user{
+    position: absolute;
+    top: 42%;
+    left: 58%;
+    transition: all ease .4s;
+}
+/*Second input password*/
+.input-password{
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 52%;
+    left: 60%;
+    width: 20%;
+    transition: all ease .4s;
+    outline: none;
+}
+.input-password:focus{
+    border-bottom: 4px solid var(--green-main);
+    outline: none;
+}
+/*Icon second input*/
+.password-icon{
+position: absolute;
+top: 54%;
+left: 58%;
+transition: all ease .4s;
+
+}
+/*Sign up paragraph*/
+.sign-up-p{
+    position: absolute;
+    top: 60%;
+    left: 58%;
+    font-family: Poppins-light;
+    font-size: 18px;
+    color: rgb(65, 64, 64);
+    transition: all ease .4s;
+}
+
+/*Login form button*/
+.login-form-button{
+    position: absolute;
+    top: 77%;
+    left: 58%;
+    color: white;
+    font-size: 50px;
+    padding-top: .5%;
+    width: 12%;
+    height: 8%;
+    padding-left: 8%;
+    border-radius: 44px;
+    background-color: var(--green-main);
+    transition: all ease .4s;
+}
+.login-form-button:hover{
+    color: var(--green-main);
+    background: transparent;
+    border: 4px solid var(--green-main);
+}
+
+/*Signup form*/
+/* 
+.register-box{
+    transition: .3s ease all;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height: 90%;
+    width: 80%;
+    background-color: var(--bg-color-main);
+    z-index: 11;
+    -webkit-box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59); 
+    box-shadow: 2px 0px 28px -2px rgba(0,0,0,0.59);
+    animation-name: entradaTitulo;
+    animation-duration: 1s; 
+    z-index: 20;
+    
+}
+@keyframes entrada2 {
+	from {
+		opacity: 0;
+		width: 0%;
+        height: 0%;
+	}
+
+	to {
+		width: 80%;
+        height: 90%;
+		opacity: 1;
+	}
+}
+
+.x{
+    position: relative;
+    left: 97%;
+    top: .5%;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    z-index: 20;
+}
+
+.register-illustration{
+    position: relative;
+    top: -3%;
+    left: 0%;
+    width: 60%;
+    height: 80%;
+    background-image: url(../images/welcome.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.register-title{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    font-size: 50px;
+    font-family: Poppins;
+
+}
+
+.input-user-secondary{
+    width: 20%;
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transition: all ease .4s;
+}
+.input-user:focus{
+outline: none;
+
+border-bottom: 4px solid var(--green-main);
+}
+
+.icon-user-secondary{
+    position: absolute;
+    top: 42%;
+    left: 58%;
+}
+
+.input-password-secondary{
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 52%;
+    left: 60%;
+    width: 20%;
+    transition: all ease .4s;
+    outline: none;
+}
+.input-password:focus{
+    border-bottom: 4px solid var(--green-main);
+    outline: none;
+}
+
+.password-icon-secondary{
+position: absolute;
+top: 54%;
+left: 58%;
+
+}
+
+.login-in-p{
+    position: absolute;
+    top: 60%;
+    left: 58%;
+    font-family: Poppins-light;
+    font-size: 18px;
+    color: rgb(65, 64, 64);
+}
+
+
+.signup-form-button{
+    position: absolute;
+    top: 77%;
+    left: 58%;
+    color: white;
+    font-size: 50px;
+    padding-top: .5%;
+    width: 12%;
+    height: 9%;
+    padding-left: 8%;
+    border-radius: 44px;
+    background-color: var(--green-main);
+} */
+.positionv2{
+    position: absolute;
+    left: 20%;
+}
